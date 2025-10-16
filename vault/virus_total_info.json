@@ -20533,5 +20533,414 @@
         "Credential API Hooking"
       ]
     ]
+  },
+  "ecc38b2d94c70426a8c8ffb8d0414c048023731d37153f2ac50e62d966505143": {
+    "hash": "ecc38b2d94c70426a8c8ffb8d0414c048023731d37153f2ac50e62d966505143",
+    "family": "AgentTesla",
+    "flattened_technique_ids": [
+      "T1564.003",
+      "T1129",
+      "T1119",
+      "T1057",
+      "T1081",
+      "T1089",
+      "T1071",
+      "T1564",
+      "T1082"
+    ],
+    "tactic_ids": [
+      "TA0002",
+      "TA0007",
+      "TA0005",
+      "TA0009",
+      "TA0006",
+      "TA0011"
+    ],
+    "tactic_names": [
+      "Execution",
+      "Discovery",
+      "Defense Evasion",
+      "Collection",
+      "Credential Access",
+      "Command and Control"
+    ],
+    "techniques_ids": [
+      [
+        "T1129"
+      ],
+      [
+        "T1057",
+        "T1082"
+      ],
+      [
+        "T1564",
+        "T1564.003",
+        "T1089"
+      ],
+      [
+        "T1119"
+      ],
+      [
+        "T1081"
+      ],
+      [
+        "T1071"
+      ]
+    ],
+    "techniques_names": [
+      [
+        "Shared Modules"
+      ],
+      [
+        "Process Discovery",
+        "System Information Discovery"
+      ],
+      [
+        "Hide Artifacts",
+        "Hidden Window",
+        "Disabling Security Tools"
+      ],
+      [
+        "Automated Collection"
+      ],
+      [
+        "Credentials in Files"
+      ],
+      [
+        "Application Layer Protocol"
+      ]
+    ]
+  },
+  "ec24dce625fac67cb54aa9c10b9faf30aa3c04799934e4f6d648bc7470f22469": {
+    "hash": "ec24dce625fac67cb54aa9c10b9faf30aa3c04799934e4f6d648bc7470f22469",
+    "family": "AgentTesla",
+    "flattened_technique_ids": [
+      "T1140",
+      "T1564.003",
+      "T1059",
+      "T1129",
+      "T1202",
+      "T1119",
+      "T1057",
+      "T1027.009",
+      "T1081",
+      "T1089",
+      "T1027",
+      "T1564",
+      "T1082"
+    ],
+    "tactic_ids": [
+      "TA0002",
+      "TA0007",
+      "TA0005",
+      "TA0009",
+      "TA0006"
+    ],
+    "tactic_names": [
+      "Execution",
+      "Discovery",
+      "Defense Evasion",
+      "Collection",
+      "Credential Access"
+    ],
+    "techniques_ids": [
+      [
+        "T1059",
+        "T1129"
+      ],
+      [
+        "T1057",
+        "T1082"
+      ],
+      [
+        "T1564",
+        "T1564.003",
+        "T1089",
+        "T1027",
+        "T1027.009",
+        "T1140",
+        "T1202"
+      ],
+      [
+        "T1119"
+      ],
+      [
+        "T1081"
+      ]
+    ],
+    "techniques_names": [
+      [
+        "Command and Scripting Interpreter",
+        "Shared Modules"
+      ],
+      [
+        "Process Discovery",
+        "System Information Discovery"
+      ],
+      [
+        "Hide Artifacts",
+        "Hidden Window",
+        "Disabling Security Tools",
+        "Obfuscated Files or Information",
+        "Embedded Payloads",
+        "Deobfuscate/Decode Files or Information",
+        "Indirect Command Execution"
+      ],
+      [
+        "Automated Collection"
+      ],
+      [
+        "Credentials in Files"
+      ]
+    ]
+  },
+  "ce8cdbdac7f2dc6b5b8068a910e3309c97bf897904753447ed842d4fef60cdb6": {
+    "hash": "ce8cdbdac7f2dc6b5b8068a910e3309c97bf897904753447ed842d4fef60cdb6",
+    "family": "AgentTesla",
+    "flattened_technique_ids": [
+      "T1564.003",
+      "T1059",
+      "T1129",
+      "T1057",
+      "T1027.009",
+      "T1564",
+      "T1089",
+      "T1027",
+      "T1086",
+      "T1082"
+    ],
+    "tactic_ids": [
+      "TA0002",
+      "TA0007",
+      "TA0005"
+    ],
+    "tactic_names": [
+      "Execution",
+      "Discovery",
+      "Defense Evasion"
+    ],
+    "techniques_ids": [
+      [
+        "T1059",
+        "T1129",
+        "T1086"
+      ],
+      [
+        "T1057",
+        "T1082"
+      ],
+      [
+        "T1027",
+        "T1564",
+        "T1564.003",
+        "T1089",
+        "T1027.009"
+      ]
+    ],
+    "techniques_names": [
+      [
+        "Command and Scripting Interpreter",
+        "Shared Modules",
+        "PowerShell"
+      ],
+      [
+        "Process Discovery",
+        "System Information Discovery"
+      ],
+      [
+        "Obfuscated Files or Information",
+        "Hide Artifacts",
+        "Hidden Window",
+        "Disabling Security Tools",
+        "Embedded Payloads"
+      ]
+    ]
+  },
+  "c54ce51a29ddd50483f582dc39543fd56f560f1db17efddf28382fc452212d0d": {
+    "hash": "c54ce51a29ddd50483f582dc39543fd56f560f1db17efddf28382fc452212d0d",
+    "family": "AgentTesla",
+    "flattened_technique_ids": [
+      "T1573",
+      "T1036",
+      "T1064",
+      "T1055",
+      "T1105",
+      "T1071",
+      "T1095"
+    ],
+    "tactic_ids": [
+      "TA0002",
+      "TA0005",
+      "TA0004",
+      "TA0011"
+    ],
+    "tactic_names": [
+      "Execution",
+      "Defense Evasion",
+      "Privilege Escalation",
+      "Command and Control"
+    ],
+    "techniques_ids": [
+      [
+        "T1064"
+      ],
+      [
+        "T1064",
+        "T1055",
+        "T1036"
+      ],
+      [
+        "T1055"
+      ],
+      [
+        "T1573",
+        "T1095",
+        "T1071",
+        "T1105"
+      ]
+    ],
+    "techniques_names": [
+      [
+        "Scripting"
+      ],
+      [
+        "Scripting",
+        "Process Injection",
+        "Masquerading"
+      ],
+      [
+        "Process Injection"
+      ],
+      [
+        "Encrypted Channel",
+        "Non-Application Layer Protocol",
+        "Application Layer Protocol",
+        "Ingress Tool Transfer"
+      ]
+    ]
+  },
+  "53e3d40438281dbf5e1134d15416f086775173aa7cbdfaa7b85465bf8480cddc": {
+    "hash": "53e3d40438281dbf5e1134d15416f086775173aa7cbdfaa7b85465bf8480cddc",
+    "family": "FormBook",
+    "flattened_technique_ids": [
+      "T1564.003",
+      "T1129",
+      "T1057",
+      "T1027.009",
+      "T1082",
+      "T1564",
+      "T1089",
+      "T1027",
+      "T1086",
+      "T1059"
+    ],
+    "tactic_ids": [
+      "TA0002",
+      "TA0005",
+      "TA0007"
+    ],
+    "tactic_names": [
+      "Execution",
+      "Defense Evasion",
+      "Discovery"
+    ],
+    "techniques_ids": [
+      [
+        "T1129",
+        "T1059",
+        "T1086"
+      ],
+      [
+        "T1027",
+        "T1564",
+        "T1564.003",
+        "T1089",
+        "T1027.009"
+      ],
+      [
+        "T1057",
+        "T1082"
+      ]
+    ],
+    "techniques_names": [
+      [
+        "Shared Modules",
+        "Command and Scripting Interpreter",
+        "PowerShell"
+      ],
+      [
+        "Obfuscated Files or Information",
+        "Hide Artifacts",
+        "Hidden Window",
+        "Disabling Security Tools",
+        "Embedded Payloads"
+      ],
+      [
+        "Process Discovery",
+        "System Information Discovery"
+      ]
+    ]
+  },
+  "c3157e851e8881640c974074f7f50836c0eaf503a2134719ef1374d7824a449b": {
+    "hash": "c3157e851e8881640c974074f7f50836c0eaf503a2134719ef1374d7824a449b",
+    "family": "FormBook",
+    "flattened_technique_ids": [
+      "T1564.003",
+      "T1129",
+      "T1057",
+      "T1027.009",
+      "T1082",
+      "T1564",
+      "T1089",
+      "T1027",
+      "T1086",
+      "T1059"
+    ],
+    "tactic_ids": [
+      "TA0002",
+      "TA0005",
+      "TA0007"
+    ],
+    "tactic_names": [
+      "Execution",
+      "Defense Evasion",
+      "Discovery"
+    ],
+    "techniques_ids": [
+      [
+        "T1129",
+        "T1059",
+        "T1086"
+      ],
+      [
+        "T1027",
+        "T1564",
+        "T1564.003",
+        "T1089",
+        "T1027.009"
+      ],
+      [
+        "T1057",
+        "T1082"
+      ]
+    ],
+    "techniques_names": [
+      [
+        "Shared Modules",
+        "Command and Scripting Interpreter",
+        "PowerShell"
+      ],
+      [
+        "Obfuscated Files or Information",
+        "Hide Artifacts",
+        "Hidden Window",
+        "Disabling Security Tools",
+        "Embedded Payloads"
+      ],
+      [
+        "Process Discovery",
+        "System Information Discovery"
+      ]
+    ]
   }
 }

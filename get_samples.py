@@ -4,6 +4,7 @@
 import requests
 import json
 import os
+from pathlib import Path
 
 def check_for_malwaare_db(filename):
     if os.path.exists(filename):
@@ -47,7 +48,7 @@ def download_samples(totals, virus_sample_db, api_key, malware_family, limit):
         print("Error:", res.status_code, res.text)
 
 def main():
-    local_sample_file = "malware_hashes.json"
+    local_sample_file = Path("vault") / "malware_hashes.json"
     virus_sample_db = check_for_malwaare_db(local_sample_file)
     auth_key = input("Please supply Malwaare Balzaar API KEY: ")
 

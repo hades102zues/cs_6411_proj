@@ -1,6 +1,7 @@
 import os
 import json
 import pandas as pd
+from pathlib import Path
 
 
 def check_for_virustotal_db(filename):
@@ -12,7 +13,7 @@ def check_for_virustotal_db(filename):
         return {}
     
 def main():
-    virus_total_file = "virus_total_info.json"
+    virus_total_file = Path("vault") / "virus_total_info.json"
     virus_total_lookup_db = check_for_virustotal_db(virus_total_file)
 
     if len(virus_total_lookup_db) < 1:
@@ -43,7 +44,7 @@ def main():
     # this will arrange each row in order of occurenence within sample_hashes.
     one_hot_technique_matrix = one_hot_technique_matrix.reindex(sample_hashes)
     
-    matrix_file = "one_hot_matrix.csv"
+    matrix_file = Path("vault") / "one_hot_matrix.csv"
     one_hot_technique_matrix.to_csv(matrix_file, index=False)
     
 

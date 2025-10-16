@@ -5,6 +5,7 @@
 import os
 import json
 import requests
+from pathlib import Path
 
 def check_for_malwaare_db(filename):
     if os.path.exists(filename):
@@ -113,7 +114,7 @@ def pull_virus_total_info(tactic_storage, technique_storage, api_key, virus_hash
         return (0, {})
 
 def main():
-    local_sample_file = "malware_hashes.json"
+    local_sample_file = Path("vault") / "malware_hashes.json"
     sample_db= check_for_malwaare_db(local_sample_file)
 
     if len(sample_db) < 1:
@@ -122,12 +123,12 @@ def main():
 
 
     api_key = input("Please supply Virus Total API KEY: ")
-    virus_total_file = "virus_total_info.json"
+    virus_total_file = Path("vault") / "virus_total_info.json"
     virus_total_lookup_db = check_for_virustotal_db(virus_total_file)
 
-    tactics_file = "tactic_info.json"
+    tactics_file = Path("vault") / "tactic_info.json"
     tactic_storage = check_for_tactic_info(tactics_file)
-    techniques_file = "technique_info.json"
+    techniques_file = Path("vault") / "technique_info.json"
     technique_storage = check_for_technique_info(techniques_file)
     
     for virus_hash, sample in sample_db.items():
