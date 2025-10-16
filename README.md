@@ -1,6 +1,6 @@
 
 > [!warning]
-> You will **need** to grab API keys from Malware Balzaar and Virus Total to run these scripts.
+> You will **need** API keys from Malware Balzaar and Virus Total to run these scripts.
 
 # get_sample.py 
 Pulls virus samples from Malware Balzaar and stores in 
