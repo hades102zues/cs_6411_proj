@@ -21,24 +21,28 @@ def main():
         return 0
     
     sample_hashes = []
-    sample_techniques = []
+    sample_traits = []
 
     for virus_hash, info in virus_total_lookup_db.items():
         sample_hashes.append(virus_hash)
-        sample_techniques.append(info["flattened_technique_ids"])
-    
+
+        # Combine family name with the list of techniques
+        combined_traits = [info["family"]] + info["tactic_ids"]+info["flattened_technique_ids"]
+        sample_traits.append(combined_traits)
+
+       
     data = {
         "sample": sample_hashes,
-        "techniques": sample_techniques
+        "traits": sample_traits
     }
 
     # loading a dataframe
     df = pd.DataFrame(data)
 
     # setup for one-hot encoding matrix
-    one_hot_technique_matrix = df.explode("techniques")\
+    one_hot_technique_matrix = df.explode("traits")\
         .assign(positive = 1) \
-        .pivot(index="sample", columns="techniques", values="positive") \
+        .pivot(index="sample", columns="traits", values="positive") \
         .fillna(0).astype(int)
     
     # this will arrange each row in order of occurenence within sample_hashes.
@@ -48,6 +52,6 @@ def main():
     one_hot_technique_matrix.to_csv(matrix_file, index=False)
     
 
-    # bunch of ml analysis techniques or whatever 
+    # bunch of ml analysis traits or whatever 
 if __name__ == "__main__":
     main()
