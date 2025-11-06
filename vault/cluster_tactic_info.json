@@ -1,0 +1,50 @@
+{
+  "0": {
+    "id": [
+      "TA0005",
+      "TA0007",
+      "TA0004"
+    ],
+    "name": [
+      "Defense Evasion",
+      "Discovery",
+      "Privilege Escalation"
+    ]
+  },
+  "1": {
+    "id": [
+      "TA0005",
+      "TA0007",
+      "TA0002"
+    ],
+    "name": [
+      "Defense Evasion",
+      "Discovery",
+      "Execution"
+    ]
+  },
+  "2": {
+    "id": [
+      "TA0005",
+      "TA0007",
+      "TA0009"
+    ],
+    "name": [
+      "Defense Evasion",
+      "Discovery",
+      "Collection"
+    ]
+  },
+  "3": {
+    "id": [
+      "TA0011",
+      "TA0005",
+      "TA0002"
+    ],
+    "name": [
+      "Command and Control",
+      "Defense Evasion",
+      "Execution"
+    ]
+  }
+}

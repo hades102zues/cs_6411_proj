@@ -1,0 +1,66 @@
+{
+  "0": {
+    "id": [
+      "T1082",
+      "T1497",
+      "T1057",
+      "T1071",
+      "T1055"
+    ],
+    "name": [
+      "System Information Discovery",
+      "Virtualization/Sandbox Evasion",
+      "Process Discovery",
+      "Application Layer Protocol",
+      "Process Injection"
+    ]
+  },
+  "1": {
+    "id": [
+      "T1082",
+      "T1057",
+      "T1027",
+      "T1497",
+      "T1518"
+    ],
+    "name": [
+      "System Information Discovery",
+      "Process Discovery",
+      "Obfuscated Files or Information",
+      "Virtualization/Sandbox Evasion",
+      "Software Discovery"
+    ]
+  },
+  "2": {
+    "id": [
+      "T1071",
+      "T1082",
+      "T1005",
+      "T1003",
+      "T1114"
+    ],
+    "name": [
+      "Application Layer Protocol",
+      "System Information Discovery",
+      "Data from Local System",
+      "OS Credential Dumping",
+      "Email Collection"
+    ]
+  },
+  "3": {
+    "id": [
+      "T1071",
+      "T1082",
+      "T1057",
+      "T1095",
+      "T1036"
+    ],
+    "name": [
+      "Application Layer Protocol",
+      "System Information Discovery",
+      "Process Discovery",
+      "Non-Application Layer Protocol",
+      "Masquerading"
+    ]
+  }
+}
