@@ -114,7 +114,7 @@ def cluster_data(tatics_lookup_db,
     with open(cluster_top_techniques_file, "w") as f:
         json.dump(cluster_techniques, f, indent=2)
 
-    return [cluster_tactics, cluster_techniques]
+    return {"tactics": cluster_tactics, "techniques":cluster_techniques}
     
 
 def main():
@@ -177,8 +177,9 @@ def main():
                  cluster_top_techniques_file,
                  cluster_top_tactics_file)
 
-
     
+    print(cluster_info["tactics"][0])
+    print(cluster_info["techniques"][0])
 
     
 if __name__ == "__main__":
