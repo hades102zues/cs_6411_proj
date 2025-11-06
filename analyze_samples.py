@@ -40,6 +40,11 @@ def cluster_data(tatics_lookup_db,
                  one_hot_technique_matrix, 
                  cluster_top_techniques_file,
                  cluster_top_tactics_file):
+    
+    num_clusters = 4
+    num_tactics = 3
+    num_techns = 5
+
 
     # remove the families to prevent bias
     pairwise_df = one_hot_technique_matrix.drop(columns=sample_families, errors="ignore")
@@ -48,7 +53,7 @@ def cluster_data(tatics_lookup_db,
     jaccard = pairwise_distances(pairwise_df.to_numpy(), metric="jaccard")
 
     # Run K-Medoids
-    kmed = KMedoids(n_clusters=4, metric="precomputed", random_state=42)
+    kmed = KMedoids(n_clusters=num_clusters, metric="precomputed", random_state=42)
     kmed.fit(jaccard)
 
     # Add back our cluster labels
@@ -69,7 +74,7 @@ def cluster_data(tatics_lookup_db,
         # rotate so now each cluster index is the column
         # each row is a tatic and the value amount under each cluster column
         # grab the top 3 tactics per cluster
-        top_tactics_per_cluster = cluster_tactic_profiles.T.nlargest(3, c)
+        top_tactics_per_cluster = cluster_tactic_profiles.T.nlargest(num_tactics, c)
 
         # convert the IDs to names and store them
         named_tatics = [tatics_lookup_db.get(ta, ta) for ta in top_tactics_per_cluster.index]
@@ -99,7 +104,7 @@ def cluster_data(tatics_lookup_db,
     cluster_techniques = {}
 
     for c in cluster_techn_profiles.index:
-        top_techn_per_cluster = cluster_techn_profiles.T.nlargest(5, c)
+        top_techn_per_cluster = cluster_techn_profiles.T.nlargest(num_techns, c)
         named_techniques = [techn_lookup_db.get(tech, tech) for tech in top_techn_per_cluster.index]
         cluster_techniques[c] = {}
         cluster_techniques[c]["id"] = top_techn_per_cluster.index.to_list()
@@ -163,7 +168,9 @@ def main():
     matrix_file = Path("vault") / "one_hot_matrix.csv"
     one_hot_technique_matrix.to_csv(matrix_file, index=False)
 
-    cluster_data(tatics_lookup_db, 
+
+    # [ list(top_3_tactics), list(top_5_techniques) ]
+    cluster_info = cluster_data(tatics_lookup_db, 
                  techn_lookup_db, 
                  sample_families, 
                  one_hot_technique_matrix, 
